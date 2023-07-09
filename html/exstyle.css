@@ -1,0 +1,28 @@
+ .mystyle
+      {
+        color:rgb(168, 5, 5);
+        background-color:rgb(178, 226, 100);
+        font-size:18;
+        font-weight:bold
+      }
+    .mystyle1 
+      {
+        color:rgb(156, 34, 255);
+        background-color:rgb(123, 233, 218);
+        font-size:18px
+       }
+    .mystyle2
+        {
+        color:rgb(255, 11, 11);
+        background-color:rgb(0, 247, 0);
+        }
+    .mystyle3
+        {
+          color:rgb(255, 0, 0);
+          
+          
+        }
+input
+  {
+    color: rgb(65, 75, 224);
+   }

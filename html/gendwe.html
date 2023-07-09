@@ -1,0 +1,38 @@
+<html>
+<head>
+  <script type="text/javascript">
+    function validation()
+    {
+        var g=document.getElementById("gender").value;
+      if(g!="")
+        {
+            alert("p select gender");
+          return true;
+        }
+       else 
+        {
+          alert("please select gender");
+          return false;
+        }
+      return true;
+    }
+
+</script>
+</head>
+<body>
+<form id="r1">
+ 
+         Gender:
+       
+            <input type="radio" id="gender" name="gender"/>MALE
+            <input type="radio" id="gender" name="gender"/>FEMALE
+      
+     <input type="submit"  onclick="validation()" value="register" id="reg" name="reg" />
+          
+        
+   
+
+       
+</form>
+</body>
+</html>

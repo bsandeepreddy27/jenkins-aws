@@ -1,0 +1,102 @@
+<html>
+<head>
+<script type="text/javascript">
+    function validation()
+    {
+        var x=document.getElementById("login").value;
+        var y=document.getElementById("pwd").value;
+        if(x=="")
+        {
+          alert("please enter username");
+          return false;
+        }
+        if(y=="")
+        {
+          alert("please enter password");
+          return false;
+        }
+        return true;
+    }
+
+</script>
+<link href="exstyle.css" type="text/css" rel="stylesheet" />
+ 
+</head>
+<body>
+<form id='f1'>
+    <marquee class="mystyle3">  welcome to login page</marquee>
+<table border='2' align='center'>
+<tr>
+<td class="mystyle"> Login</td>
+<td class="mystyle2">
+<input type='text'   id='login' name='login'/>
+</td>
+</tr>
+<tr>
+<td class="mystyle">Password</td>
+<td class="mystyle2">
+<input type='password'  id='pwd' name='pwd'/>
+</td>
+</tr>
+
+<tr >
+<td >
+<input type='submit' value='Login' onclick="validation()" id='submit' name='submit'/>
+</td>
+<td >
+<input type='reset' value='Clear' id='clear' name='clear'/>
+</td>
+</tr>
+</table>
+<table border='2'>
+<tr>
+    
+    <p align="center"> <a href="register.html"> <i><u> <img src="images/signup.png" width="100" height="50"></u> </i></a>
+    </p>
+    
+</tr>
+</table>
+</form>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
