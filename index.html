@@ -1,0 +1,148 @@
+{% extends "base.html" %}
+
+{% block title %}Index{% endblock title %}
+{% block body %}
+
+{%load static%}
+<html>
+
+<head>
+    <div class="container-fluid mx-0">
+        <div id="carouselExampleCaptions" class="carousel slide">
+
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="static/login.jpeg" class="d-block w-100" alt="...">
+
+
+                </div>
+            </div>
+
+
+        </div>
+
+        <link href="(%url 'exstyle.css' %}" rel="stylesheet" />
+       <!-- <script type="text/javascript">
+            function validate() {
+                var n = document.getElementById('name').value;
+                var r = document.getElementById('rn').value;
+                var b = document.getElementById('branch').value;
+                var e = document.getElementById('email').value;
+                var c = document.getElementById('con').value;
+                var usr = document.getElementById('username').value;
+                var pas = document.getElementById('pwd').value;
+                if (n == "") {
+                    alert("Please enter name");
+                    return false;
+                }
+                if (r == "") {
+                    alert("Please enter RollNo");
+                    return false;
+                }
+                if (b == "") {
+                    alert("Please enter branch");
+                    return false;
+                }
+                if (e == "") {
+                    alert("Please enter Email");
+                    return false;
+                }
+                if (c == "") {
+                    alert("Please enter Contact");
+                    return false;
+                }
+                if (usr == "") {
+                    alert("Please enter username");
+                    return false;
+                }
+                if (pas == "") {
+                    alert("Please enter password");
+                    return false;
+                }
+
+                return true;
+            }
+        </script> --> 
+</head>
+
+<body>
+    <div align="center">
+        <!-- <img src="{%static 'logo.jpg' %}"  width="200" height="100"/>  -->
+    </div>
+    <form id="f1" method="POST" action="index">
+        {% csrf_token %}
+        <table align="center" border="2" style="
+    position: absolute;
+    top: 145px;
+    left: 555px; ">
+            <div>
+                <tr>
+                    <td align="center">Name</td>
+                    <td> <input type="text" id="name" name="name" required/> </td>
+                </tr>
+                <tr>
+                    <td align="center">RollNo</td>
+                    <td> <input type="text" id="rn" name="rn" required/> </td>
+                </tr>
+                <tr>
+                    <td align="center">Branch</td>
+                    <td>
+                        <select id="branch" name="branch" required>
+                            <option value="">select</option>
+                            <option>CSE</option>
+                            <option>AI</option>
+                            <option>ECE</option>
+                            <option>MECH</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center">Email Id</td>
+                    <td> <input type="email" id="email" name="email" required/> </td>
+                </tr>
+                <tr>
+                    <td align="center">Contact</td>
+                    <td> <input type="number" id="con" name="con" required/> </td>
+                </tr>
+
+
+            </div>
+            <div>
+                <tr>
+                    <td align="center">Userame</td>
+                    <td> <input type="text" id="username" name="username" required/> </td>
+                </tr>
+                <tr>
+                    <td align="center">Password</td>
+                    <td> <input type="password" id="pwd" name="pwd" required/> </td>
+                </tr>
+            </div>
+            <div>
+                <tr>
+                    <td>
+                        <input onclick="return validate()" type="submit" value="Register" id="submit" name="submit" />
+
+                    <td align="center">
+                        <input type="reset" value="clear" id="clear" name="clear" />
+                    </td>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td colspan="2" align="center">
+                        <a href="login">Already a user Sign In ?</a>
+
+                    </td>
+                </tr>
+            </div>
+
+        </table>
+
+    </form>
+
+
+</body>
+
+</html>
+
+{% endblock body %}
