@@ -1,0 +1,98 @@
+{% extends "base.html" %}
+
+{% block title %}Login{% endblock title %}
+
+{% block body %}
+<html>
+
+<head>
+
+    <!--<script type="text/javascript">
+        function validate() {
+            var a = document.getElementById('username').value;
+            var b = document.getElementById('password').value;
+            if (a == "") {
+                alert("Please enter username");
+                return false;
+
+            }
+            if (b == "") {
+                alert("Please enter password");
+                return false;
+            }
+            return true;
+        }
+    </script>
+-->
+ 
+</head>
+
+<body>
+    <div class="container-fluid mx-0">
+        <div id="carouselExampleCaptions" class="carousel slide">
+
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="static/login.jpeg" class="d-block w-100" alt="...">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <form id="f1" method="POST" action="login">
+        {%csrf_token%}
+        <table border="2" align="center" style="
+        position: absolute;
+        top: 180px;
+        left: 555px; ">
+            <tr>
+                <td colspan="2" align="center">
+                    <h3>LOGIN HERE</h3>
+                </td>
+            </tr>
+            <tr>
+                <td class="mystyle">User Name</td>
+                <td>
+                    <input type="text" id="username" name="username" required/>
+                </td>
+            </tr>
+            <tr>
+                <td class="mystyle">Password</td>
+                <td>
+                    <input type="password" id="password" name="password" required/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit"  value="Login" id="login" />
+                </td>
+                <td>
+                    <input type="reset" value="Clear" onclick="display()" id="clear" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <a href="index">New User? Sign Up</a>
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    {{status}}
+                </td>
+            </tr>
+        </table>
+    </form>
+
+</body>
+
+</html>
+
+
+{% endblock body %}
+# https://source.unsplash.com/1680x600/?food,fruits,table
